@@ -1,9 +1,12 @@
 :root {
-    --black: #000000;
-    --dark-gray: #1a1a1a;
-    --silver: #C0C0C0;
-    --white: #FFFFFF;
-    --accent-blue: #4285f4;
+    --black: #0d0d0d;
+    --dark-gray: #121212;
+    --silver: #a8a8a8;
+    --white: #f0f0f0;
+    --accent-blue: #007bff;
+    --accent-blue-dark: #0056b3;
+    --neon-green: #00ff99;
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -18,12 +21,12 @@ body {
 /* Header Styling */
 header {
     text-align: center;
-    padding: 20px 0;
-    background-color: var(--black);
+    padding: 20px;
+    background: linear-gradient(135deg, var(--black), var(--dark-gray));
     color: var(--white);
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--shadow);
 }
 
 .banner img {
@@ -41,7 +44,7 @@ header {
     border: 3px solid var(--white);
     border-radius: 10px;
     background-color: var(--black);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 /* Product Grid */
@@ -58,14 +61,16 @@ header {
     background: var(--black);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--silver);
+    position: relative;
+    overflow: hidden;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 255, 153, 0.3);
 }
 
 .product-card img {
@@ -76,6 +81,7 @@ header {
     border: 1px solid var(--silver);
 }
 
+/* CTA Button */
 .cta-button {
     background: var(--accent-blue);
     color: var(--white);
@@ -86,14 +92,38 @@ header {
     font-weight: 600;
     width: 100%;
     transition: all 0.3s;
+    box-shadow: 0 4px 8px var(--shadow);
+    text-align: center;
+    display: inline-block;
 }
 
 .cta-button:hover {
-    background: #2b6cd4;
-    transform: scale(1.02);
+    background: var(--accent-blue-dark);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px var(--shadow);
 }
 
-/* Support Button */
+/* WhatsApp Order Button */
+.whatsapp-button {
+    background: var(--neon-green);
+    color: var(--black);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s;
+    text-align: center;
+    display: inline-block;
+}
+
+.whatsapp-button:hover {
+    background: #00cc77;
+    transform: scale(1.05);
+}
+
+/* Floating Support Button */
 .support-button {
     position: fixed;
     bottom: 25px;
@@ -103,16 +133,17 @@ header {
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--shadow);
     transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
+    font-size: 18px;
 }
 
 .support-button:hover {
     transform: scale(1.1);
-    background: #2b6cd4;
+    background: var(--accent-blue-dark);
 }
