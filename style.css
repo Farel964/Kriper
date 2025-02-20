@@ -62,12 +62,77 @@ body {
     height: auto;
 }
 
+/* Service Section */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.02);
+}
+
+/* Gambar Produk */
 .service-item img {
     width: 100%;
-    max-width: 200px; /* Menyesuaikan ukuran gambar */
-    height: auto;
+    max-width: 350px;
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
+}
+
+/* Judul Produk */
+.service-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Deskripsi */
+.service-item p {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* Tombol Order */
+.service-item .order-button {
+    display: block;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.service-item .order-button:hover {
+    background: #0056b3;
+}
+
+/* Responsif untuk Android */
+@media (max-width: 768px) {
+    .service-item {
+        max-width: 90%;
+    }
+
+    .service-item img {
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 768px) {
