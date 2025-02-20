@@ -32,11 +32,12 @@ header {
 }
 
 .logo img {
-    width: 100px;
+    width: 100px; /* Ukuran logo */
     height: 100px;
-    margin-top: -50px; /* Overlap with header */
+    margin-top: -50px; /* Posisi di atas banner */
     border: 3px solid white;
-    border-radius: 50%;
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 /* Product Grid */
