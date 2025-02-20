@@ -62,6 +62,20 @@ body {
     height: auto;
 }
 
+.service-item img {
+    width: 100%;
+    max-width: 200px; /* Menyesuaikan ukuran gambar */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .service-item img {
+        max-width: 150px; /* Ukuran lebih kecil untuk Android */
+    }
+}
+
 /* Footer */
 footer {
     font-size: 12px;
