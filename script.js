@@ -5,13 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Toggle Sidebar
     navToggle.addEventListener("click", function() {
-        sidebar.classList.toggle("active");
+        if (sidebar.style.left === "0px") {
+            sidebar.style.left = "-250px";
+        } else {
+            sidebar.style.left = "0px";
+        }
     });
 
-    // Close Sidebar when a link is clicked
+    // Close Sidebar when clicking a link
     sidebarLinks.forEach(link => {
         link.addEventListener("click", function() {
-            sidebar.classList.remove("active");
+            sidebar.style.left = "-250px";
         });
+    });
+
+    // Close Sidebar when clicking outside
+    sidebar.addEventListener("click", function() {
+        sidebar.style.left = "-250px";
     });
 });
