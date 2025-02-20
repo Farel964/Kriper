@@ -1,8 +1,8 @@
 :root {
-    --primary-black: #000000;  /* Modern green */
-    --hover-black: #000000;
+    --black: #000000;  /* Modern green */
+    --black: #000000;
     --background: #C0C0C0;
-    --text-dark: #FFFFF;
+    --text-white: #FFFFF;
 }
 
 body {
