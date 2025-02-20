@@ -34,9 +34,9 @@ header {
 .logo img {
     width: 100px; /* Ukuran logo */
     height: 100px;
-    margin-top: -50px; /* Posisi di atas banner */
-    border: 3px solid white;
-    border-radius: 10px; /* Sudut melengkung */
+    margin-top: -100px; /* Posisi di atas banner */
+    border: 0px solid white;
+    border-radius: 0px; /* Sudut melengkung */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
