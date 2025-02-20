@@ -31,14 +31,6 @@ header {
     border-radius: 10px;
 }
 
-.logo img {
-    width: 100px; /* Ukuran logo */
-    height: 100px;
-    margin: 0 auto; /* Posisi di atas banner */
-    border: 0px solid white;
-    border-radius: 0px; /* Sudut melengkung */ 
-}
-
 /* Product Grid */
 .product-grid {
     display: grid;
