@@ -1,13 +1,15 @@
 :root {
-    --black: #000000;  /* Modern green */
     --black: #000000;
-    --background: #C0C0C0;
-    --text-white: #FFFFF;
+    --dark-gray: #1a1a1a;
+    --silver: #C0C0C0;
+    --white: #FFFFFF;
+    --accent-blue: #4285f4;
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: var(--background);
+    background-color: var(--dark-gray);
+    color: var(--silver);
     margin: 0;
     padding: 20px;
     line-height: 1.6;
@@ -18,10 +20,10 @@ header {
     text-align: center;
     padding: 20px 0;
     background-color: var(--black);
-    color: white;
+    color: var(--white);
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .banner img {
@@ -29,6 +31,17 @@ header {
     max-width: 800px;
     margin: 0 auto;
     border-radius: 10px;
+    border: 2px solid var(--silver);
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    background-color: var(--black);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Product Grid */
@@ -42,15 +55,17 @@ header {
 }
 
 .product-card {
-    background: white;
+    background: var(--black);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
+    border: 1px solid var(--silver);
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .product-card img {
@@ -58,22 +73,24 @@ header {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    border: 1px solid var(--silver);
 }
 
 .cta-button {
-    background: var(--black);
-    color: white;
+    background: var(--accent-blue);
+    color: var(--white);
     border: none;
     padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
     width: 100%;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .cta-button:hover {
-    background: var(--black);
+    background: #2b6cd4;
+    transform: scale(1.02);
 }
 
 /* Support Button */
@@ -81,15 +98,21 @@ header {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: var(--blue);
-    color: white;
+    background: var(--accent-blue);
+    color: var(--white);
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 
 .support-button:hover {
     transform: scale(1.1);
+    background: #2b6cd4;
 }
