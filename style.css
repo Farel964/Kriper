@@ -17,7 +17,7 @@ body {
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: var(--primary-green);
+    background-color: var(--black);
     color: white;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -61,7 +61,7 @@ header {
 }
 
 .cta-button {
-    background: var(--primary-green);
+    background: var(--black);
     color: white;
     border: none;
     padding: 12px 25px;
@@ -73,7 +73,7 @@ header {
 }
 
 .cta-button:hover {
-    background: var(--hover-green);
+    background: var(--black);
 }
 
 /* Support Button */
