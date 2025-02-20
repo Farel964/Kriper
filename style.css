@@ -19,57 +19,53 @@ body {
 }
 
 /* Sidebar Navigation */
-.sidebar {
+#sidebar {
     position: fixed;
-    top: 0;
     left: -250px;
+    top: 0;
     width: 250px;
     height: 100%;
     background: var(--black);
-    transition: left 0.3s ease-in-out;
-    padding-top: 50px;
+    padding-top: 60px;
+    transition: 0.3s;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
+#sidebar a {
+    display: block;
     padding: 15px;
-    text-align: center;
-}
-
-.sidebar ul li a {
     color: var(--white);
     text-decoration: none;
     font-size: 18px;
 }
 
-.menu-btn {
+#sidebar a:hover {
+    background: var(--accent-blue);
+}
+
+#nav-toggle {
     position: fixed;
     top: 15px;
     left: 15px;
     background: var(--accent-blue);
     color: var(--white);
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.close-btn {
+#close-sidebar {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: transparent;
+    background: none;
     border: none;
     color: var(--white);
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
 }
 
-/* Header */
+/* Header Styling */
 header {
     text-align: center;
     padding: 20px;
@@ -83,94 +79,146 @@ header {
 .banner img {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 10px;
     border: 2px solid var(--silver);
 }
 
-.main-title {
-    margin-top: 20px;
-}
-
 /* Promo Section */
-.promo {
+.promo-section {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
-.promo img {
+.promo-section img {
     width: 100%;
     max-width: 600px;
-    border-radius: 8px;
-    border: 1px solid var(--silver);
+    border-radius: 10px;
 }
 
-.promo p {
+.promo-section p {
     font-size: 18px;
-    margin-top: 10px;
 }
 
-/* Scroll Animation Section */
-.info-section {
+/* Scroll Info Section */
+.scroll-info {
     text-align: center;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.info-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.scroll-info h2 {
+    font-size: 28px;
 }
 
-.scroll-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.scroll-text {
-    font-size: 16px;
-}
-
-.info-section img {
+.scroll-info img {
     width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
+    max-width: 700px;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 50px;
     padding: 20px;
     background: var(--black);
     border-radius: 10px;
 }
 
-footer a {
-    color: var(--accent-blue);
-    text-decoration: none;
-}
-
 /* Floating Support Button */
 .support-button {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 15px;
+    right: 15px;
     background: var(--accent-blue);
     color: var(--white);
-    padding: 15px;
+    padding: 12px;
     border-radius: 50%;
     text-decoration: none;
     box-shadow: 0 4px 8px var(--shadow);
     transition: all 0.3s;
+    font-size: 16px;
+}
+
+/* Announcement Page */
+.announcement-header {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px;
+    color: var(--neon-green);
+}
+
+.announcement-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.announcement-bubble {
+    background: var(--black);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.announcement-date {
+    font-size: 12px;
+    color: var(--silver);
+}
+
+/* Service Page */
+.service-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+}
+
+.service-box {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+/* Feedback Page */
+.feedback-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback-message {
+    padding: 10px;
+    font-size: 16px;
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--silver);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#feedback-list {
+    list-style: none;
+    padding: 0;
+}
+
+#feedback-list li {
+    background: var(--black);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
 .support-button:hover {
