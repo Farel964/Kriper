@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navToggle = document.getElementById("nav-toggle");
     const sidebar = document.getElementById("sidebar");
+    const sidebarLinks = sidebar.querySelectorAll("a");
 
     // Toggle Sidebar
     navToggle.addEventListener("click", function() {
-        sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+        sidebar.classList.toggle("active");
     });
 
-    sidebar.addEventListener("click", function() {
-        sidebar.style.left = "-250px";
+    // Close Sidebar when a link is clicked
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            sidebar.classList.remove("active");
+        });
     });
 });
