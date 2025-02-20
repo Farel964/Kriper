@@ -5,70 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kriper Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
     <!-- Sidebar Navigation -->
-    <div id="sidebar" class="sidebar">
-        <button class="close-btn" onclick="closeSidebar()">✖</button>
-        <a href="index.html">Home</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="services.html">Services</a>
-        <a href="news.html">News</a>
-        <a href="feedback.html">Feedback</a>
-    </div>
-
-    <!-- Menu Button -->
-    <button class="menu-btn" onclick="openSidebar()">☰</button>
+    <nav class="sidebar">
+        <button class="close-btn">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="announcement.html">Announcement</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <button class="menu-btn">☰</button>
 
     <!-- Header Section -->
     <header>
         <div class="banner">
-            <img src="banner.gif" alt="Kriper Store Banner">
+            <img src="banner.gif" alt="Kriper Website Banner">
         </div>
-        <h1>Kriper Websites</h1>
+        <h1 class="main-title">Kriper Website</h1>
     </header>
 
-    <!-- Product Grid -->
-    <main class="product-grid">
-        <div class="product-card">
-            <img src="product1.jpg" alt="Minecraft Server Ranks">
-            <h3>Kriper Server Ranks</h3>
-            <p>Premium Ranks For Kriper Minecraft Server.</p>
-            <a href="https://wa.me/6281553348960" target="_blank">
-                <button class="cta-button">Order Here</button>
-            </a>
-        </div>
+    <!-- Promo Section -->
+    <section class="promo">
+        <img src="promo.jpg" alt="Limited Offer">
+        <p>Exclusive deals and promotions available now!</p>
+    </section>
 
-        <div class="product-card">
-            <img src="product2.jpg" alt="Legendary Weapon">
-            <h3>Kriper Legendary Weapons</h3>
-            <p>RPG Weapon For Kriper Minecraft Server.</p>
-            <a href="https://wa.me/6281553348960" target="_blank">
-                <button class="cta-button">Order Here</button>
-            </a>
-        </div>
+    <!-- Scroll Animation Section -->
+    <section class="info-section">
+        <h2 class="scroll-title">Test Title</h2>
+        <p class="scroll-text">Example text goes here.</p>
+        <img src="large-image.png" alt="Large Image">
+    </section>
 
-        <div class="product-card">
-            <img src="product3.jpg" alt="Premium Plugin">
-            <h3>Premium Plugins</h3>
-            <p>Premium Plugins For Minecraft Servers 100% Ori.</p>
-            <a href="https://wa.me/6281553348960" target="_blank">
-                <button class="cta-button">Order Here</button>
-            </a>
-        </div>
-    </main>
+    <!-- Footer -->
+    <footer>
+        <p>All rights reserved © 2025 Kriper Website. No refunds after purchase.</p>
+        <p>For any issues, contact our customer support via the message button at the bottom right.</p>
+        <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a>
+    </footer>
 
     <!-- Floating Support Button -->
     <a href="https://wa.me/6281553348960" class="support-button" target="_blank">💬</a>
-
-    <script src="sidebar.js"></script>
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Kriper Website. All rights reserved.</p>
-        <p>All services provided are guaranteed safe. No refunds after purchase.</p>
-        <p>Need help? Contact our customer service by clicking the chat button in the bottom right corner.</p>
-        <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
-    </footer>
 </body>
 </html>
