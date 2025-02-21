@@ -63,41 +63,51 @@ body {
 }
 
 /* Features Section */
-.features {
+.features-section {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    margin-top: 30px;
+    justify-content: center;
     gap: 20px;
+    padding: 40px 20px;
+    background: #1c1c1c;
+    flex-wrap: wrap;
 }
 
-.feature-item {
+.feature {
     background: #1c1c1c;
     padding: 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
     text-align: center;
-    width: 30%;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.feature-item img {
-    width: 60px;
-    height: 60px;
+.feature:hover {
+    transform: scale(1.05);
 }
 
-.feature-item h3 {
-    margin-top: 10px;
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
 }
 
-.feature-item p {
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
     font-size: 14px;
     color: #b0b0b0;
 }
 
 /* Promo Section */
 .promo-section {
-    margin-top: 30px;
+    background: #1c1c1c;
+    padding: 20px;
+    margin: 20px 0;
 }
 
 .promo-section img {
@@ -106,9 +116,32 @@ body {
     border-radius: 10px;
 }
 
+.promo-section p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
 /* Scrolling Info Section */
 .scroll-info {
-    margin-top: 30px;
+    padding: 40px 20px;
+    background: #1c1c1c;
+}
+
+.scroll-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.scroll-info p {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+.scroll-info img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 /* Footer */
@@ -130,14 +163,22 @@ footer {
     font-size: 20px;
 }
 
-/* Responsive for Mobile */
+/* Responsif untuk Android */
 @media (max-width: 768px) {
-    .features {
-        flex-direction: column;
+    .feature {
+        max-width: 90%;
     }
 
-    .feature-item {
-        width: 80%;
-        margin-bottom: 20px;
+    .feature img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .promo-section img {
+        max-width: 100%;
+    }
+
+    .scroll-info img {
+        max-width: 100%;
     }
 }
