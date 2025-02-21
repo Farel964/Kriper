@@ -43,58 +43,142 @@ body {
     cursor: pointer;
 }
 
-/* Service Section */
-#services {
-    padding: 40px 20px;
-}
-
-.service-card {
-    background: #1c1c1c;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 400px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
-
-.service-card img {
+/* Banner */
+.banner img {
     width: 100%;
+    max-width: 600px;
+    margin-top: 100px;
+}
+
+.kriper-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kriper-logo img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background: #1c1c1c;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #1c1c1c;
+    padding: 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.service-card h3 {
-    margin-top: 15px;
-    font-size: 20px;
+.feature:hover {
+    transform: scale(1.05);
 }
 
-.service-card p {
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
     font-size: 14px;
     color: #b0b0b0;
-    margin: 10px 0;
 }
 
-.service-card .order-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
+/* Promo Section */
+.promo-section {
+    background: #1c1c1c;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.promo-section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.promo-section p {
     margin-top: 10px;
+    font-size: 16px;
 }
 
-.service-card .order-btn:hover {
-    background-color: #0056b3;
+/* Scrolling Info Section */
+.scroll-info {
+    padding: 40px 20px;
+    background: #1c1c1c;
+}
+
+.scroll-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.scroll-info p {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+.scroll-info img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Floating Support Button */
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 /* Responsif untuk Android */
 @media (max-width: 768px) {
-    .service-card {
+    .feature {
         max-width: 90%;
     }
 
-    .service-card img {
-        width: 100%;
+    .feature img {
+        width: 60px;
+        height: 60px;
     }
-}
+
+    .promo-section img {
+        max-width: 100%;
+    }
+
+    .scroll-info img {
+        max-width: 100%;
+    }
+        }
