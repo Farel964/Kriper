@@ -63,51 +63,41 @@ body {
 }
 
 /* Features Section */
-.features-section {
+.features {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
     gap: 20px;
-    padding: 40px 20px;
-    background: #1c1c1c;
-    flex-wrap: wrap;
 }
 
-.feature {
+.feature-item {
     background: #1c1c1c;
     padding: 20px;
     border-radius: 10px;
-    width: 90%;
-    max-width: 300px;
     text-align: center;
+    width: 30%;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
 }
 
-.feature:hover {
-    transform: scale(1.05);
+.feature-item img {
+    width: 60px;
+    height: 60px;
 }
 
-.feature img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
+.feature-item h3 {
+    margin-top: 10px;
 }
 
-.feature h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.feature p {
+.feature-item p {
     font-size: 14px;
     color: #b0b0b0;
 }
 
 /* Promo Section */
 .promo-section {
-    background: #1c1c1c;
-    padding: 20px;
-    margin: 20px 0;
+    margin-top: 30px;
 }
 
 .promo-section img {
@@ -116,32 +106,9 @@ body {
     border-radius: 10px;
 }
 
-.promo-section p {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
 /* Scrolling Info Section */
 .scroll-info {
-    padding: 40px 20px;
-    background: #1c1c1c;
-}
-
-.scroll-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.scroll-info p {
-    font-size: 16px;
-    color: #b0b0b0;
-}
-
-.scroll-info img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-top: 30px;
 }
 
 /* Footer */
@@ -163,22 +130,14 @@ footer {
     font-size: 20px;
 }
 
-/* Responsif untuk Android */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
-    .feature {
-        max-width: 90%;
+    .features {
+        flex-direction: column;
     }
 
-    .feature img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .promo-section img {
-        max-width: 100%;
-    }
-
-    .scroll-info img {
-        max-width: 100%;
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
