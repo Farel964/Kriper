@@ -1,100 +1,163 @@
-/* General Styles */
+/* General Styling */
 body {
     background-color: #121212;
-    color: #ffffff;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+h2 {
     text-align: center;
+    margin-top: 20px;
 }
 
 /* Sidebar */
 #sidebar {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: -250px;
     width: 250px;
     height: 100%;
-    background: #1c1c1c;
-    padding-top: 20px;
-    transition: left 0.3s;
+    background: #1e1e1e;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
 
 #sidebar a {
     display: block;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
+    margin: 15px 0;
+    color: #fff;
 }
 
-#sidebar a:hover {
-    background: #333;
-}
-
-/* Navigation Button */
 #nav-toggle {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #1c1c1c;
-    color: white;
+    top: 20px;
+    left: 20px;
+    background: #1e1e1e;
+    color: #fff;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
+    z-index: 1001;
 }
 
-/* Service Section */
-#services {
-    padding: 40px 20px;
+#sidebar.open {
+    left: 0;
 }
 
-.service-card {
-    background: #1c1c1c;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 400px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+/* Header and Banner */
+header .banner {
+    position: relative;
     text-align: center;
 }
 
-.service-card img {
+header .banner img {
     width: 100%;
-    border-radius: 10px;
 }
 
-.service-card h3 {
-    margin-top: 15px;
-    font-size: 20px;
+header .kriper-logo {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.service-card p {
-    font-size: 14px;
-    color: #b0b0b0;
+header .kriper-logo img {
+    width: 100px;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.features-section .feature {
+    text-align: center;
+}
+
+.features-section .feature img {
+    width: 60px;
+}
+
+.features-section .feature h3 {
     margin: 10px 0;
 }
 
-.service-card .order-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
+.features-section .feature p {
+    color: #bbb;
+}
+
+/* Promo Section */
+.promo-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.promo-section img {
+    width: 100%;
+}
+
+.promo-section p {
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
-.service-card .order-btn:hover {
-    background-color: #0056b3;
+/* Service Section */
+.service-section {
+    padding: 20px;
+    text-align: center;
 }
 
-/* Responsif untuk Android */
-@media (max-width: 768px) {
-    .service-card {
-        max-width: 90%;
-    }
+.service-section .product {
+    background: #1e1e1e;
+    padding: 15px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 10px;
+}
 
-    .service-card img {
-        width: 100%;
-    }
+.service-section .product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service-section .order-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1e1e1e;
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+/* Floating Support Button */
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    text-decoration: none;
 }
